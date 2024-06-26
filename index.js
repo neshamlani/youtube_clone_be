@@ -59,6 +59,50 @@ app.get("/videos", (req, res) => {
   res.json({ data: sampleData });
 });
 
+app.get("/shorts", (req, res) => {
+  const sampleData = [
+    {
+      videoUrl: "/videos/short.mp4",
+      videoTitle: "Bee flying away",
+      channelName: "Channel 1",
+      channelId: "1",
+      uploadedAt: new Date().toString(),
+      thumbnail: "/thumbnail/short.jpeg",
+      isLiked: false,
+      isDisliked: false,
+      likeCount: 10,
+      dislikedCount: 20,
+      isShorts: true,
+    },
+    {
+      videoUrl: "/videos/short.mp4",
+      videoTitle: "Bee flying away 2",
+      channelName: "Channel 22",
+      channelId: "3",
+      uploadedAt: new Date().toString(),
+      thumbnail: "/thumbnail/short.jpeg",
+      isLiked: true,
+      isDisliked: false,
+      likeCount: 10,
+      dislikedCount: 20,
+      isShorts: true,
+    },
+    {
+      videoUrl: "/videos/short.mp4",
+      videoTitle: "Beeeess",
+      channelName: "Channel 12",
+      channelId: "4",
+      uploadedAt: new Date().toString(),
+      thumbnail: "/thumbnail/short.jpeg",
+      isLiked: false,
+      isDisliked: true,
+      likeCount: 10,
+      dislikedCount: 20,
+      isShorts: true,
+    },
+  ];
+  res.json({ data: sampleData });
+});
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
