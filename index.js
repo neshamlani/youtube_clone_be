@@ -28,6 +28,7 @@ app.get("/videos", (req, res) => {
       likeCount: 10,
       dislikedCount: 20,
       isShorts: false,
+      videoId: 1,
     },
     {
       videoUrl: "/videos/bee.mp4",
@@ -41,6 +42,7 @@ app.get("/videos", (req, res) => {
       likeCount: 10,
       dislikedCount: 20,
       isShorts: false,
+      videoId: 2,
     },
     {
       videoUrl: "/videos/bee.mp4",
@@ -54,6 +56,7 @@ app.get("/videos", (req, res) => {
       likeCount: 10,
       dislikedCount: 20,
       isShorts: false,
+      videoId: 3,
     },
   ];
   res.json({ data: sampleData });
@@ -73,6 +76,7 @@ app.get("/shorts", (req, res) => {
       likeCount: 10,
       dislikedCount: 20,
       isShorts: true,
+      videoId: 4,
     },
     {
       videoUrl: "/videos/short.mp4",
@@ -86,6 +90,7 @@ app.get("/shorts", (req, res) => {
       likeCount: 10,
       dislikedCount: 20,
       isShorts: true,
+      videoId: 5,
     },
     {
       videoUrl: "/videos/short.mp4",
@@ -99,6 +104,7 @@ app.get("/shorts", (req, res) => {
       likeCount: 10,
       dislikedCount: 20,
       isShorts: true,
+      videoId: 6,
     },
   ];
   res.json({ data: sampleData });
